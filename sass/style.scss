@@ -1,0 +1,159 @@
+@import "compass";
+@import "sass/main.scss"; 
+
+@import url(http://fonts.googleapis.com/css?family=Lobster+Two:400,700);
+
+$sidebar_link_color: #fff;
+$sidebar_link_hover_color: #2ecc71;
+
+body,html{
+  height:100%;
+  font-size: 18px;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6{
+  margin:0;
+  padding:0;
+}
+
+img.img-responsive{
+    max-width:100% !important;
+    height:auto;
+    display:block;
+}
+
+.img-center{
+  margin: 0 auto;
+  text-align: center;
+}
+
+.nav-container{
+  position:fixed;
+  left:0;
+  top:0;
+  width:18%;
+  height:100%;
+  background:#181818;
+  text-align:center;
+  z-index:2;
+  font-size:18px;
+  line-height: 18px;
+  .navigation{
+    position:relative;
+  }
+  ul{
+    margin:0;
+    padding:0;
+    li{
+      margin:0;
+      padding:15px 0; 
+      list-style: none;
+      a{
+        color: $sidebar_link_color;
+        text-decoration: none;
+        &:hover{
+          color: $sidebar_link_hover_color;
+        }
+      }
+    }
+  }
+  .social{
+    display:block;
+  }
+  .logo{
+    color:#fff;
+    width:100%;
+    padding:15px 0;
+    font: 37px "Lobster Two", helvetica, arial, sans-serif;
+    line-height: 37px;
+    font-weight: 400px;
+  }
+  #menu-icon{
+    display: none;
+    cursor:pointer;
+    position: absolute;
+    right:14px;
+    top:14px;
+  }
+}
+
+.main-content{
+  left:18%; 
+  width:82%;
+  position: absolute;
+  color:181818;
+}
+
+.container{
+  width:100%;
+}
+
+.mast-header{
+  height:250px;
+  background: url('../images/img1.jpg') no-repeat center center;
+  @include background-size(cover);
+}
+
+.page{
+  background:#fafafa;
+  margin-bottom:10px;
+}
+
+.page-content{
+  padding:20px;
+}
+
+.side-section{
+  margin-bottom:10px;
+  font-size: 16px;
+}
+
+.side-header{
+  background:#2ecc71;
+  height:56px;
+  padding: 12px 5px;
+  text-align: center;
+}
+
+.side-content{ 
+  background: #fafafa;
+  padding: 5px;
+}
+
+@media only screen and (max-width: 992px){
+  .main-content{
+    left:0;
+    top:60px;
+    width:100%;
+  }
+  .nav-container{
+    width:100%;
+    height:60px;
+    .navigation{
+      position:absolute;
+      display:none;
+      top:60px;
+      width:100%;
+      padding:10px 0;
+      background:#181818;
+      font-size: 18px;
+      li{
+        padding: 5px 0;
+      }
+    }
+    .logo{
+      font-size:25px;
+      line-height: 60px;
+      padding:0;
+    }
+    #menu-icon{
+      display:block;
+    }
+  }
+  
+}
